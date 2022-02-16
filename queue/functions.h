@@ -42,3 +42,27 @@ int push(Queue *ptrQueue, int number) {
         return 1;
     }
 }
+
+int pop(Queue *ptrQueue) {
+    int load = checkLoad(ptrQueue);
+
+    if (load == -1) {
+        // Is empty
+        return -1;
+
+    } else {
+        // Isn't empty
+        int num = ptrQueue->numbers[ptrQueue->front];
+
+        if (load == 1 && ptrQueue->front == ptrQueue->end) {
+            // Is full
+            init(ptrQueue);
+            
+        } else {
+            // Isn't full
+            ptrQueue->front++;
+        }
+
+        return num;
+    }
+}
