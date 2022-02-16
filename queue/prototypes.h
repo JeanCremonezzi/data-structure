@@ -7,3 +7,9 @@ int checkLoad(Queue *ptrQueue);
     0 = queue still has free space
     1 = queue is full
 */
+
+int push(Queue *ptrQueue, int number);
+/* Push insert a number from queue rear and returns:
+    0 = succeed
+    1 = fails
+*/

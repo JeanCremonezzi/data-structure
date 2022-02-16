@@ -11,9 +11,34 @@ int checkLoad(Queue *ptrQueue) {
     } else if (ptrQueue->end == (MAXSIZE - 1)) {
         // Is full
         return 1;
-        
+
     } else {
         // Has free space
         return 0;
+    }
+}
+
+int push(Queue *ptrQueue, int number) {
+
+    int load = checkLoad(ptrQueue);
+
+    if (load == -1) {
+        // Is empty
+        ptrQueue->front = 0;
+        ptrQueue->end = 0;
+        ptrQueue->numbers[0] = number;
+
+        return 0;
+
+    } else if (load == 0) {
+        // Has free space
+        ptrQueue->end++;
+        ptrQueue->numbers[ptrQueue->end] = number;
+
+        return 0;
+
+    } else {
+        // Is full
+        return 1;
     }
 }
