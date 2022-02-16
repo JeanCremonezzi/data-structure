@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-#include "constants.c"
-#include "types.c"
+#include "constants.h"
+#include "types.h"
 
 int main() {
     printf("\nQueue Data Structure");
