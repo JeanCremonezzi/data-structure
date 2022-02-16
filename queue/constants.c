@@ -1,1 +1,1 @@
-#define MAXSIZE 100;
+#define MAXSIZE 100
