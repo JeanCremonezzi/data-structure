@@ -19,3 +19,9 @@ int pop(Queue *ptrQueue);
     int < 0 = Is empty
     int >= 0 = the removed number
 */
+
+int size(Queue *ptrQueue);
+/* Size calculates the size of the queue and returns:
+    > 0 = size of the queue
+    0 = empty
+*/

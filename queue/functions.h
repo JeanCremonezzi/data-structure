@@ -57,7 +57,7 @@ int pop(Queue *ptrQueue) {
         if (load == 1 && ptrQueue->front == ptrQueue->end) {
             // Is full
             init(ptrQueue);
-            
+
         } else {
             // Isn't full
             ptrQueue->front++;
@@ -65,4 +65,8 @@ int pop(Queue *ptrQueue) {
 
         return num;
     }
+}
+
+int size(Queue *ptrQueue) {
+    return ptrQueue->end + 1;
 }
