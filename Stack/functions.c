@@ -54,14 +54,7 @@ int pop(Stack *ptrStack) {
         // Isn't empty
         int num = ptrStack->numbers[ptrStack->top];
 
-        if (load == 1) {
-            // Is full
-            init(ptrStack);
-
-        } else {
-            // Isn't full
-            ptrStack->top--;
-        }
+        ptrStack->top--;
 
         return num;
     }
