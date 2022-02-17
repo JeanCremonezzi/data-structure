@@ -13,3 +13,9 @@ int push(Stack *ptrStack, int number);
     0 = succeed
     1 = fails
 */
+
+int pop(Stack *ptrStack);
+/* Pop removes a number from stack top and returns:
+    int < 0 = Is empty
+    int >= 0 = the removed number
+*/

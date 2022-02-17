@@ -42,3 +42,28 @@ int push(Stack *ptrStack, int number) {
         return 1;
     }
 }
+
+int pop(Stack *ptrStack) {
+    int load = checkLoad(ptrStack);
+
+    if (load == -1) {
+        // Is empty
+        return -1;
+
+    } else {
+        // Isn't empty
+        int num = ptrStack->numbers[ptrStack->top];
+
+        if (load == 1) {
+            // Is full
+            init(ptrStack);
+
+        } else {
+            // Isn't full
+            ptrStack->top--;
+        }
+
+        return num;
+    }
+
+}
