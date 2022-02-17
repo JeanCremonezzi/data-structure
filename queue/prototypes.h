@@ -14,7 +14,7 @@ int push(Queue *ptrQueue, int number);
     1 = fails
 */
 
-int pop(Queue *ptrQueue);
+int shift(Queue *ptrQueue);
 /* Pop remove a number from queue front and returns:
     int < 0 = Is empty
     int >= 0 = the removed number

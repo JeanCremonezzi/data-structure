@@ -45,7 +45,7 @@ int push(Queue *ptrQueue, int number) {
     }
 }
 
-int pop(Queue *ptrQueue) {
+int shift(Queue *ptrQueue) {
     int load = checkLoad(ptrQueue);
 
     if (load == -1) {
