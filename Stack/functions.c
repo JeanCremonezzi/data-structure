@@ -60,3 +60,7 @@ int pop(Stack *ptrStack) {
     }
 
 }
+
+int size(Stack *ptrStack) {
+    return ptrStack->top + 1;
+}

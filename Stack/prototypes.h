@@ -19,3 +19,9 @@ int pop(Stack *ptrStack);
     int < 0 = Is empty
     int >= 0 = the removed number
 */
+
+int size(Stack *ptrStack);
+/* Size calculates the size of the stack and returns:
+    > 0 = size of the stack
+    0 = empty
+*/
