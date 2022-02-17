@@ -1,5 +1,5 @@
 #include "header.h"
 
 int main() {
-    printf("\Stack Data Structure");
+    printf("\nStack Data Structure");
 }
