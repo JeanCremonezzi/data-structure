@@ -18,3 +18,27 @@ int checkLoad(Stack *ptrStack) {
         return 0;
     }
 }
+
+int push(Stack *ptrStack, int number) {
+
+    int load = checkLoad(ptrStack);
+
+    if (load == -1) {
+        // Is empty
+        ptrStack->top = 0;
+        ptrStack->numbers[0] = number;
+
+        return 0;
+
+    } else if (load == 0) {
+        // Has free space
+        ptrStack->top++;
+        ptrStack->numbers[ptrStack->top] = number;
+
+        return 0;
+
+    } else {
+        // Is full
+        return 1;
+    }
+}
