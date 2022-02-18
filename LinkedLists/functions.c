@@ -1,13 +1,13 @@
 #include "header.h"
 
-Head* init() {
-    Head* adrsHead = malloc(sizeof(Head));
+Head init() {
+    Head adrsHead = malloc(sizeof(Head));
 
-    adrsHead->first = NULL;
+    adrsHead->next = NULL;
 
     return adrsHead;
 }
 
-int isEmpty(Head *ptrHead) {
-    return ptrHead->first == NULL ? 1 : 0;
+int isEmpty(Head ptrHead) {
+    return ptrHead->next == NULL ? 1 : 0;
 }
