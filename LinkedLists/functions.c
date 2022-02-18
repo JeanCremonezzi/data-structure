@@ -7,3 +7,7 @@ Head* init() {
 
     return adrsHead;
 }
+
+int isEmpty(Head *ptrHead) {
+    return ptrHead->first == NULL ? 1 : 0;
+}
