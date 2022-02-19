@@ -40,3 +40,26 @@ Node* push(List ptrList, int item) {
 
     return newNode;
 }
+
+void printList(List ptrList) {
+
+    if (isEmpty(ptrList)) {
+        printf("\nList is empty");
+    } else {
+        Node *toPrint = ptrList->first;
+        
+        printf("\n");
+
+        int index = 0;
+        while (1) {
+            printf("(%i)%i | ", index, toPrint->value);
+            index++;
+
+            if (toPrint->next == NULL) {
+                break;
+            }
+
+            toPrint = toPrint->next;
+        }
+    }
+}

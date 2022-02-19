@@ -18,3 +18,8 @@ Node* push(List ptrList, int item);
 /* push inserts a new item in the end of the list and returns:
     the position of the new item
 */
+
+void printList(List ptrList);
+/* PrintList prints all elements in the list:
+    (index) element
+*/
