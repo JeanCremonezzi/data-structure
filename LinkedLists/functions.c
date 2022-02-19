@@ -1,23 +1,29 @@
 #include "header.h"
 
 List init() {
-    List adrsHead = malloc(sizeof(List));
+    List adrsList = malloc(sizeof(List));
 
-    adrsHead->first = NULL;
+    adrsList->first = NULL;
+    adrsList->last = NULL;
 
-    return adrsHead;
+    return adrsList;
 }
 
-int isEmpty(List ptrHead) {
-    return ptrHead->first == NULL ? 1 : 0;
+int isEmpty(List ptrList) {
+    return ptrList->first == NULL ? 1 : 0;
 }
 
-Node* unshift(List ptrHead, int item) {
+Node* unshift(List ptrList, int item) {
     Node *newNode = malloc(sizeof(Node));
 
     newNode->value = item;
-    newNode->next = ptrHead->first;
-    ptrHead->first = newNode;
+    newNode->next = ptrList->first;
+
+    if (isEmpty(ptrList) == 1) {
+        ptrList->last = newNode;
+    }
+
+    ptrList->first = newNode;
 
     return newNode;
 }
