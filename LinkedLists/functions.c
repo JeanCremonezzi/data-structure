@@ -3,11 +3,11 @@
 Head init() {
     Head adrsHead = malloc(sizeof(Head));
 
-    adrsHead->next = NULL;
+    adrsHead->first = NULL;
 
     return adrsHead;
 }
 
 int isEmpty(Head ptrHead) {
-    return ptrHead->next == NULL ? 1 : 0;
+    return ptrHead->first == NULL ? 1 : 0;
 }

@@ -1,4 +1,8 @@
-typedef struct {
+typedef struct Node{
     int value;
     struct Node *next;
-} Node, *Head;
+} Node;
+
+typedef struct {
+    struct Node *first;
+} *Head;
