@@ -27,3 +27,16 @@ Node* unshift(List ptrList, int item) {
 
     return newNode;
 }
+
+Node* push(List ptrList, int item) {
+    Node *newNode = malloc(sizeof(Node));
+
+    newNode->value = item;
+    newNode->next = NULL;
+
+    ptrList->last->next = newNode;
+    
+    ptrList->last = newNode;
+
+    return newNode;
+}

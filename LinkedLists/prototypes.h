@@ -13,3 +13,8 @@ Node* unshift(List ptrList, int item);
 /* unshift inserts a new item in the front of the list and returns:
     the position of the new item
 */
+
+Node* push(List ptrList, int item);
+/* push inserts a new item in the end of the list and returns:
+    the position of the new item
+*/
