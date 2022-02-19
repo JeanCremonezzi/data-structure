@@ -5,4 +5,5 @@ typedef struct Node{
 
 typedef struct {
     struct Node *first;
-} *Head;
+    struct Node *last;
+} *List;

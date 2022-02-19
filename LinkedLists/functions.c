@@ -1,18 +1,18 @@
 #include "header.h"
 
-Head init() {
-    Head adrsHead = malloc(sizeof(Head));
+List init() {
+    List adrsHead = malloc(sizeof(List));
 
     adrsHead->first = NULL;
 
     return adrsHead;
 }
 
-int isEmpty(Head ptrHead) {
+int isEmpty(List ptrHead) {
     return ptrHead->first == NULL ? 1 : 0;
 }
 
-Node* unshift(Head ptrHead, int item) {
+Node* unshift(List ptrHead, int item) {
     Node *newNode = malloc(sizeof(Node));
 
     newNode->value = item;
