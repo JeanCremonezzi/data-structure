@@ -98,3 +98,21 @@ Node* insert(List ptrList, int index, int item) {
         return newNode;
     }
 }
+
+int shift(List ptrList) {
+
+    if (!isEmpty(ptrList)) {
+        Node *nodeToRemove = ptrList->first;
+        int item = nodeToRemove->value;
+
+        if (nodeToRemove->next == NULL) {
+            ptrList->last = NULL;
+        };
+
+        ptrList->first = nodeToRemove->next;
+        
+        free(nodeToRemove);
+
+        return item;
+    }
+}

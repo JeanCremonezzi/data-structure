@@ -31,3 +31,8 @@ Node* insert(List ptrList, int index, int item);
     -> If index is out of range, inserts in the end with push()
     -> If list is empty, inserts in the front with unshift()
 */
+
+int shift(List ptrList);
+/* Shift removes an item from the front of the list and returns:
+    the removed item
+*/
