@@ -23,3 +23,11 @@ void printList(List ptrList);
 /* PrintList prints all elements in the list:
     (index) element
 */
+
+Node* insert(List ptrList, int index, int item);
+/* Inserts a new item in the specified index of the list and returns:
+    the position of the new item
+
+    -> If index is out of range, inserts in the end with push()
+    -> If list is empty, inserts in the front with unshift()
+*/

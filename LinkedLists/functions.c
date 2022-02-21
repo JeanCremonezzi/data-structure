@@ -67,3 +67,34 @@ void printList(List ptrList) {
         }
     }
 }
+
+Node* insert(List ptrList, int index, int item) {
+
+    if (index == 0 || isEmpty(ptrList)) {
+        return unshift(ptrList, item);
+
+    } else {
+        Node *newNode = malloc(sizeof(Node));
+        newNode->value = item;
+
+        Node *prevNode = ptrList->first;
+
+        for (int indexInList = 1; indexInList <= index; indexInList++) {
+
+            if (prevNode->next == NULL) {
+                push(ptrList, item);
+                break;
+
+            } else if (indexInList == index) {
+                newNode->next = prevNode->next;
+                prevNode->next = newNode;
+                prevNode = prevNode->next;
+                break;
+            }
+
+            prevNode = prevNode->next;
+        }
+
+        return newNode;
+    }
+}
