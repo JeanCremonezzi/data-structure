@@ -116,3 +116,33 @@ int shift(List ptrList) {
         return item;
     }
 }
+
+int pop(List ptrList) {
+
+    if (!isEmpty(ptrList)) {
+        Node *nodeToRemove = ptrList->last;
+        int item = nodeToRemove->value;
+
+        if (ptrList->first == ptrList->last) {
+            ptrList->first = NULL;
+            ptrList->last = NULL;
+            
+        } else {
+            Node *nodeCheck = ptrList->first;
+
+            while (1) {
+                if (nodeCheck->next->next == NULL) {
+                    nodeCheck->next = NULL;
+                    ptrList->last = nodeCheck;
+                    break;
+                }
+
+                nodeCheck = nodeCheck->next;
+            }
+        }
+        
+        free(nodeToRemove);
+
+        return item;
+    }
+}

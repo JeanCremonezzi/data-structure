@@ -36,3 +36,8 @@ int shift(List ptrList);
 /* Shift removes an item from the front of the list and returns:
     the removed item
 */
+
+int pop(List ptrList);
+/* Pop removes an item from the end of the list and returns:
+    the removed item
+*/
