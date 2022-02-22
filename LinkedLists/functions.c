@@ -146,3 +146,40 @@ int pop(List ptrList) {
         return item;
     }
 }
+
+int removeFrom(List ptrList, int index) {
+
+    if (!isEmpty(ptrList)) {
+        if (index == 0) {
+            return shift(ptrList);
+        }
+
+        Node *actualNode = ptrList->first;
+        Node *nodeToRemove;
+
+        for (int i = 1; i <= index; i++) {
+            
+            if (actualNode->next == NULL) {
+                break;
+            }
+
+            if (index == i) {
+                nodeToRemove = actualNode->next;
+
+                if (actualNode->next->next == NULL) {
+                    actualNode->next = NULL;
+                    ptrList->last = actualNode;
+
+                } else {
+                    actualNode->next = actualNode->next->next;
+                }
+
+                int item = nodeToRemove->value;
+                free(nodeToRemove);
+                return item;
+            }
+
+            actualNode = actualNode->next;
+        }
+    }
+}
