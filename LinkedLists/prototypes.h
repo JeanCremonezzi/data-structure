@@ -43,6 +43,6 @@ int pop(List ptrList);
 */
 
 int removeFrom(List ptrList, int index);
-/* Remove removes an item from the specified index of the list and returns:
+/* RemoveFrom removes an item from the specified index of the list and returns:
     the removed item
 */
