@@ -51,3 +51,9 @@ int inIndex(List ptrList, int index);
 /* InIndex finds an item from the specified index of the list and returns:
     the item in the index
 */
+
+int indexOf(List ptrList, int item);
+/* IndexOf finds the index of an specified item in the list and returns:
+    -> If the item is on the list, the index of the first occurrence of the item
+    -> -1 if the is isn't on the list or list is empty
+*/

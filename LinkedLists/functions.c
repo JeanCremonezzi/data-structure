@@ -205,3 +205,26 @@ int inIndex(List ptrList, int index) {
         }
     }
 }
+
+int indexOf(List ptrList, int item) {
+
+    if (!isEmpty(ptrList)) {
+        Node *actualNode = ptrList->first;
+
+        int index = 0;
+        while (1) {
+            if (actualNode->value == item) {
+                return index;
+            }
+
+            if (actualNode->next == NULL) {
+                break;
+            }
+
+            index++;
+            actualNode = actualNode->next;
+        }       
+    }
+
+    return -1;
+}
