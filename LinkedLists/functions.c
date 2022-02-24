@@ -112,7 +112,9 @@ int shift(List ptrList) {
 
         if (nodeToRemove->next == NULL) {
             ptrList->last = NULL;
-        };
+        } else {
+            ptrList->first->next->previous = NULL;
+        }
 
         ptrList->first = nodeToRemove->next;
         
