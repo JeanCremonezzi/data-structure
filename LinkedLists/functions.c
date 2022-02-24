@@ -34,6 +34,7 @@ Node* push(List ptrList, int item) {
 
     newNode->value = item;
     newNode->next = NULL;
+    newNode->previous = ptrList->last;
 
     if (isEmpty(ptrList) == 1) {
         ptrList->first = newNode;
