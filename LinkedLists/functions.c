@@ -161,24 +161,16 @@ int removeFrom(List ptrList, int index) {
             return shift(ptrList);
         }
 
-        Node *actualNode = ptrList->first;
-        Node *nodeToRemove;
+        Node *nodeToRemove = ptrList->first->next;
 
         for (int i = 1; i <= index; i++) {
-            
-            if (actualNode->next == NULL) {
-                break;
-            }
+            if (i == index) {
 
-            if (index == i) {
-                nodeToRemove = actualNode->next;
-
-                if (actualNode->next->next == NULL) {
-                    actualNode->next = NULL;
-                    ptrList->last = actualNode;
-
+                if (nodeToRemove->next == NULL) {
+                    ptrList->last = nodeToRemove->previous;
+                    ptrList->last->next = NULL;
                 } else {
-                    actualNode->next = actualNode->next->next;
+                    nodeToRemove->next->previous = nodeToRemove->previous;
                 }
 
                 int item = nodeToRemove->value;
@@ -186,7 +178,11 @@ int removeFrom(List ptrList, int index) {
                 return item;
             }
 
-            actualNode = actualNode->next;
+            if (nodeToRemove->next == NULL) {
+                break;
+            }
+
+            nodeToRemove = nodeToRemove->next;
         }
     }
 }
