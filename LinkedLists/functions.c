@@ -186,3 +186,22 @@ int removeFrom(List ptrList, int index) {
         }
     }
 }
+
+int inIndex(List ptrList, int index) {
+
+    if (!isEmpty(ptrList)) {
+        Node *actualNode = ptrList->first;
+
+        for (int i = 0; i <= index; i++) {
+            if (i == index) {
+                return actualNode->value;
+            }
+
+            if (actualNode->next == NULL) {
+                break;
+            }
+
+            actualNode = actualNode->next;
+        }
+    }
+}

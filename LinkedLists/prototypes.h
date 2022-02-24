@@ -46,3 +46,8 @@ int removeFrom(List ptrList, int index);
 /* RemoveFrom removes an item from the specified index of the list and returns:
     the removed item
 */
+
+int inIndex(List ptrList, int index);
+/* InIndex finds an item from the specified index of the list and returns:
+    the item in the index
+*/
