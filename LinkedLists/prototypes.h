@@ -57,3 +57,6 @@ int indexOf(List ptrList, int item);
     -> If the item is on the list, the index of the first occurrence of the item
     -> -1 if the is isn't on the list or list is empty
 */
+
+void reverse(List ptrList);
+/* Reverse relocates all list items in reverse order */

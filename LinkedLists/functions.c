@@ -228,3 +228,30 @@ int indexOf(List ptrList, int item) {
 
     return -1;
 }
+
+void reverse(List ptrList) {
+
+    if (!isEmpty(ptrList) && ptrList->first->next != NULL) {
+        Node *auxNode = ptrList->last;
+        
+        ptrList->first = ptrList->last;
+
+        while (1) {
+
+            if (auxNode->previous == NULL) {
+                auxNode->previous = auxNode->next;
+                auxNode->next = NULL;
+                ptrList->last = auxNode;
+
+                break;
+            }
+            
+            Node *auxNodePrev= auxNode->next;
+
+            auxNode->next = auxNode->previous;
+            auxNode->previous = auxNodePrev;
+
+            auxNode = auxNode->next;
+        }
+    }
+}
