@@ -18,8 +18,9 @@ Node* unshift(List ptrList, int item) {
 
     newNode->value = item;
     newNode->next = ptrList->first;
+    newNode->previous = NULL;
 
-    if (isEmpty(ptrList) == 1) {
+    if (isEmpty(ptrList)) {
         ptrList->last = newNode;
     }
 
