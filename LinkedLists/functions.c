@@ -53,19 +53,19 @@ void printList(List ptrList) {
         printf("\nList is empty");
     } else {
         Node *toPrint = ptrList->first;
-        
+
         printf("\n");
 
         int index = 0;
         while (1) {
             printf("(%i)%i | ", index, toPrint->value);
-            index++;
 
             if (toPrint->next == NULL) {
                 break;
             }
 
             toPrint = toPrint->next;
+            index++;
         }
     }
 }
@@ -89,6 +89,9 @@ Node* insert(List ptrList, int index, int item) {
 
             } else if (indexInList == index) {
                 newNode->next = prevNode->next;
+                newNode->previous = prevNode;    
+
+                prevNode->next->previous = newNode;
                 prevNode->next = newNode;
                 prevNode = prevNode->next;
                 break;
